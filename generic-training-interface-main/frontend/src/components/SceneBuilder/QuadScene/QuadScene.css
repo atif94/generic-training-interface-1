@@ -1,0 +1,167 @@
+.alignment {
+  width: 50%;
+  float: left;
+}
+
+.basicButton {
+  width: 150px;
+  height: 70px;
+  margin-left: 39%;
+  /* margin-left: 30%; */
+  margin-top: 15%;
+}
+
+.basicButtons {
+  width: 150px;
+  height: 70px;
+  margin-top: 20%;
+}
+
+.enterQuestion {
+  margin-left: 2%;
+}
+
+.quizsButton {
+  width: 150px;
+  height: 70px;
+  margin-top: 0%;
+}
+
+.quizsButtons {
+  width: 150px;
+  height: 70px;
+  margin-left: 45%;
+  margin-top: -70px;
+}
+
+.titleQuiz {
+  margin-left: 31%;
+}
+
+.icon {
+  font-size: 50px;
+  margin-left: 40%;
+  cursor: pointer;
+}
+
+.quizIcons {
+  font-size: 50px;
+  margin-top: 18%;
+  margin-left: 80%;
+  cursor: pointer;
+}
+
+.postButton {
+  width: 150px;
+  height: 70px;
+  margin-top: 4%;
+  margin-left: 8%;
+}
+
+.textArea {
+  clear: both;
+}
+
+.textPart {
+  margin-left: 35%;
+  margin-top: 17%;
+}
+
+.textPart-student {
+  font-size: 100%;
+  margin: 5%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.cancelButton {
+  width: 150px;
+  height: 70px;
+  margin-left: 40%;
+  margin-top: -11.15%;
+  background-color: black;
+}
+
+#div1 {
+  background-color: lightgrey;
+  height: 552px;
+}
+
+.quiz {
+  margin-left: 17%;
+  margin-top: 10%;
+}
+
+.titleButton {
+  width: 550px;
+  background-color: lightgray;
+  text-align: center;
+  color: black;
+  height: 60px;
+  border-bottom: 2px solid;
+}
+
+.insButton {
+  width: 550px;
+  height: 100px;
+  background-color: lightgray;
+  text-align: center;
+  color: black;
+}
+
+#div2 {
+  background-color: lightpink;
+  height: 552px;
+}
+
+#div3 {
+  background-color: lightblue;
+  height: 552px;
+  width: 50%;
+}
+
+#div4 {
+  background-color: lightyellow;
+  height: 552px;
+}
+
+#div7 {
+  background-color: lightgray;
+  height: 1102px;
+}
+
+#div8 {
+  background-color: lightseagreen;
+  height: 1102px;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.ck-editor__editable_inline {
+  min-height: 400px;
+}
+
+.quizStyle {
+  width: 50%;
+  margin-left: 10%;
+}
+
+.quizStyles {
+  width: 50%;
+  margin-left: 1.5%;
+}
+
+.quizQuestion {
+  font-size: 24px;
+  margin-left: 25%;
+  margin-top: 2%;
+}

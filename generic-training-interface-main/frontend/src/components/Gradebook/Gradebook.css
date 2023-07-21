@@ -1,0 +1,44 @@
+
+.Gradebook {
+background-color: white;
+height: 100vh;
+  width: 100%;
+  margin: auto;
+  font-size: x-large;  
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ffffff;
+  text-align: center;
+  padding: 8px;
+  font-size: 17px;
+  color: #c751c7;
+}
+
+th {
+  background-color: #c0c0fd;
+}
+
+td {
+  background-color: #F5F5F7;
+}
+
+.Gradebook .Title {
+  font-size: 15px;
+  display: flex;
+  padding-left: 45%;
+}
+.Gradebook .quizScore {
+  display: flex;
+  padding-top: 10px;
+}
+
+.Gradebook .totalQuizScore {
+  display: flex;
+}

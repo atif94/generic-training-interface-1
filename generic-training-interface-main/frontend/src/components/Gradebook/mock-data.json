@@ -1,0 +1,27 @@
+[
+    {
+        "QuizName": "Prequiz",
+        "FinalScore": "45/50",
+        "DateOfSubmission": "March 6, 2022"
+    },
+    {
+        "QuizName": "Quiz 1 intro",
+        "FinalScore": "40/50",
+        "DateOfSubmission": "March 20, 2022"
+    },
+    {
+        "QuizName": "Quiz 3 ",
+        "FinalScore": "45/50",
+        "DateOfSubmission": "April 3, 2022"
+    },
+    {
+        "QuizName": "Midterm",
+        "FinalScore": "45/100",
+        "DateOfSubmission": "April 15, 2022"
+    },
+    {
+        "QuizName": "Final",
+        "FinalScore": "50/120",
+        "DateOfSubmission": "May 1, 2022"
+    }
+]

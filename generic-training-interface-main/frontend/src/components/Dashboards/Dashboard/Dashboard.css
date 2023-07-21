@@ -1,0 +1,132 @@
+.dashboard {
+  background-color: #fdfdfe;
+  height: 100vh;
+}
+
+.user-info {
+  margin: 0.5vh 0.5vh 0 0.5vh;
+  margin-left: 360px;
+}
+
+.user-info h2 {
+  font-size: xx-large;
+}
+
+.user-info a {
+  font-size: small;
+  padding-left: 0.2vh;
+}
+
+.sign-out {
+  color: #2f3e5c;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 2%;
+}
+
+.courseLabel {
+  font-size: 28px;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.textfield {
+  width: 40%;
+  height: 56px;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s all;
+}
+.textfield:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.join {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 33%;
+  margin-top: 10%;
+}
+
+.close {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 32%;
+  margin-top: 4%;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  height: 250px;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mainDiv {
+  margin-right: 10%;
+}
+.in-progress {
+  background-color:#f0f0f1;
+   border-radius:14px; 
+   padding:10px;
+    margin-right: 20px;
+}
+
+.number {
+  text-align: center;
+   margin-top:10%;
+}
+
+.completed {
+  background-color:#f0f0f1;
+   border-radius:14px; 
+   padding:10px;
+    
+}
+
+.enrolled {
+  background-color:#f0f0f1;
+   border-radius:14px; 
+   padding:10px;
+    margin-left: 20px;
+}
+
+.enrolled-courses,
+.enrolled-courses:hover,
+.join-course {
+  text-align: center;
+  width: 20%;
+  border-radius: 5px;
+  height: 4vh;
+  font-size: 60%;
+  margin: 2% auto auto;
+}
+
+.main {
+  text-align: center;
+  margin: 5% auto auto;
+  width: 50%;
+  height: 68vh;
+}
+
+.main img {
+  width: 75%;
+}
+
+.main h3 {
+  margin-top: 2%;
+}

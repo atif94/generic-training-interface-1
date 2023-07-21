@@ -1,0 +1,68 @@
+.course-entry {
+    margin: 0 2vh;
+    border: 1px solid #dddeea;
+    height: 7vh;
+    /*background-color: #9C1A1C;*/
+    /*margin: .1vh;*/
+}
+
+.course-name, .last-updated {
+    margin: 0 0 0 2vh;
+}
+
+.last-updated, .topic-date, .time-upload {
+    color: #969696;
+    font-size: 80%;
+}
+
+.course-name {
+    margin-top: 1.5vh;
+    font-size: 100%;
+}
+
+.topic-name, .topic-date {
+    margin: 0;
+    position: relative;
+    left: 40%;
+    bottom: 50%;
+    top: -55%;
+}
+
+.date-upload, .time-upload {
+    margin: 0;
+    position: relative;
+    left: 60%;
+    bottom: 50%;
+    top: -114%;
+}
+
+.enroll {
+    float: right;
+    width: 10%;
+    height: 3.5vh;
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 2vh 4vh 0 0;
+}
+
+.course-name-head {
+    margin-top: 2vh;
+    font-size: 100%;
+    margin-left: 2vh;
+}
+
+.topic-name-head {
+    margin: 0;
+    position: relative;
+    left: 40%;
+    bottom: 50%;
+    top: -40%;
+}
+
+.date-upload-head {
+    margin: 0;
+    position: relative;
+    left: 60%;
+    bottom: 50%;
+    top: -70%;
+}

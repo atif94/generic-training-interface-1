@@ -1,0 +1,16 @@
+.float-container {
+  /*padding: 20px;*/
+  height: 1100px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  height: 100%;
+  background-color: lightblue;
+}
+
+.blue {
+  font-size: 22px;
+}

@@ -1,0 +1,94 @@
+.jaja {
+  width: 50%;
+  float: left;
+}
+
+.basicButton {
+  width: 150px;
+  height: 70px;
+  margin-left: 40%;
+  margin-top: 20%;
+}
+
+.titleQuiz {
+  margin-left: 23%;
+}
+
+.icon {
+  font-size: 50px;
+  margin-left: 30%;
+  cursor: pointer;
+}
+
+.quizIcons {
+  font-size: 50px;
+  margin-top: 18%;
+  margin-left: 80%;
+  cursor: pointer;
+}
+
+.postButton {
+  width: 150px;
+  height: 70px;
+  margin-top: 4%;
+  margin-left: 8%;
+}
+
+.textArea {
+  clear: both;
+}
+
+.textPart {
+  margin-left: 35%;
+  margin-top: 17%;
+}
+
+.cancelButton {
+  width: 150px;
+  height: 70px;
+  margin-left: 40%;
+  margin-top: -10%;
+  background-color: black;
+}
+
+#div1 {
+  background-color: lightgrey;
+  height: 552px;
+}
+
+.quiz {
+  margin-left: 24%;
+  margin-top: 10%;
+}
+
+.titleButton {
+  width: 550px;
+  background-color: lightgray;
+  text-align: center;
+  color: black;
+  height: 60px;
+  border-bottom: 2px solid;
+}
+
+.insButton {
+  width: 550px;
+  height: 100px;
+  background-color: lightgray;
+  text-align: center;
+  color: black;
+}
+
+#div2 {
+  background-color: lightpink;
+  height: 552px;
+}
+
+#div3 {
+  background-color: lightskyblue;
+  height: 552px;
+}
+
+#div4 {
+  background-color: lightyellow;
+  height: 552px;
+}

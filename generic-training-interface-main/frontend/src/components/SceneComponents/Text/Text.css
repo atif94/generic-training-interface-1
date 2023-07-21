@@ -1,0 +1,39 @@
+.jack {
+    margin-left: 5%;
+  }
+  
+  .float-child {
+    width: 98%;
+    float: left;
+    /* padding: 20px; */
+    /* height: 100%; */
+    background-color: lightblue;
+    margin-top: 20px;
+  }
+  
+  .heading {
+    margin-top: 2%;
+    margin-left: 40%;
+  }
+  
+  .blue {
+    font-size: 22px;
+  }
+  
+  .para {
+    width: 40%;
+    background-color: lightgrey;
+  }
+  
+  .videoIcons {
+    font-size: 50px;
+    margin-left: 80%;
+    cursor: pointer;
+    margin-top: -5%;
+  }
+
+  .TextEditor {
+    margin: 3%;
+    background-color:  rgb(255, 255, 255);
+    height: 100vh;
+  }

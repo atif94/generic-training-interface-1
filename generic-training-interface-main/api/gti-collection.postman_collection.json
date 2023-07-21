@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "4df2971a-20a2-4971-9ce5-d97389a63ee9",
+		"name": "gti Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/admin/setUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firebaseId\": \"32ijidwa4lo23j\",\r\n    \"name\": \"nick3 test3\",\r\n    \"userType\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/admin/setUser",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"admin",
+						"setUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/insertAsset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assetType\": \"1\",\r\n    \"assetUrl\": \"example.org\",\r\n    \"assetTitle\": \"test\",\r\n    \"assetText\": \"sample text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/admin/insertAsset",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"admin",
+						"insertAsset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/instructor/createCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\": \"Topology\",\r\n    \"courseDesc\": \"Topology is to be taken after Real Analysis.\",\r\n    \"instructorId\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/instructor/createCourse",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"instructor",
+						"createCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/instructor/createScene",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sceneNum\": 1,\r\n    \"sceneTitle\": \"sceneTitle\",\r\n    \"courseId\": 22,\r\n    \"asset1\": 5,\r\n    \"asset2\": 5,\r\n    \"asset3\": 5,\r\n    \"asset4\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/instructor/createScene",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"instructor",
+						"createScene"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/instructor/createQuiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assetId\": 1,\r\n    \"q1\": \"What is the meaning of life?\",\r\n    \"q2\": null,\r\n    \"q3\": null,\r\n    \"q4\": null,\r\n    \"q5\": null,\r\n    \"q6\": null,\r\n    \"q7\": null,\r\n    \"q8\": null,\r\n    \"q9\": null,\r\n    \"q10\": null,\r\n    \"a1\": \"abc\",\r\n    \"a2\": null,\r\n    \"a3\": null,\r\n    \"a4\": null,\r\n    \"a5\": null,\r\n    \"a6\": null,\r\n    \"a7\": null,\r\n    \"a8\": null,\r\n    \"a9\": null,\r\n    \"a10\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/instructor/createQuiz",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"instructor",
+						"createQuiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/enrollStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 24,\r\n    \"courseId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/student/enrollStudent",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"student",
+						"enrollStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/firebaseToUserId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/admin/firebaseToUserId?firebase-id=32iji4lo23j",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"admin",
+						"firebaseToUserId"
+					],
+					"query": [
+						{
+							"key": "firebase-id",
+							"value": "32iji4lo23j"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/getCourse",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/student/getCourse?course-id=1",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"student",
+						"getCourse"
+					],
+					"query": [
+						{
+							"key": "course-id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/getScene",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/student/getScene?scene-id=1",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"student",
+						"getScene"
+					],
+					"query": [
+						{
+							"key": "scene-id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/getAsset",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws-ip}}/admin/getAsset?asset-id=1",
+					"host": [
+						"{{aws-ip}}"
+					],
+					"path": [
+						"admin",
+						"getAsset"
+					],
+					"query": [
+						{
+							"key": "asset-id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

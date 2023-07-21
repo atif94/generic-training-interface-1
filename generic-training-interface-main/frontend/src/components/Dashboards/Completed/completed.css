@@ -1,0 +1,65 @@
+.dashboard {
+    height: 100%;
+  
+    margin: auto;
+}
+
+.user-info {
+    margin: .5vh .5vh 0 .5vh;
+    text-align: center;
+}
+
+.user-info h2 {
+    font-size: xx-large;
+}
+
+.user-info a {
+    font-size: small;
+    padding-left: .2vh;
+}
+
+.sign-out {
+    color: #2f3e5c;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.enrolled-courses, .completed-courses {
+    background-color: #f0f0f1;
+    color: #2f3e5c;
+    width: 10%;
+    height: 7vh;
+    border-radius: 10px;
+    float: right;
+    font-size: 70%;
+    font-weight: 500;
+    margin: 0 1.5vh 1.5vh 0;
+}
+
+.enrolled-courses:hover, .completed-courses:hover {
+    color: #000000;
+    background-color: #e0e0e1;
+}
+
+.join-course {
+    text-align: center;
+    width: 20%;
+    border-radius: 5px;
+    height: 4vh;
+    font-size: 60%;
+    margin: 2% auto auto;
+}
+
+.main {
+    text-align: center;
+    margin: 5% auto auto;
+    width: 50%;
+}
+
+.main img {
+    width: 75%;
+}
+
+.main h3 {
+    margin-top: 2%;
+}

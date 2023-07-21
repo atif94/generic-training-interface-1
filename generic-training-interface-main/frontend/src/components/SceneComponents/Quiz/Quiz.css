@@ -1,0 +1,48 @@
+.alignment .Intro {
+    align-items: center;
+    display: flex;
+    color: rgb(109, 0, 211);
+}
+
+.alignment .TextEditor {
+    margin: 5%;
+    background-color:  rgb(255, 255, 255);
+    height: 30%;
+}
+
+.alignment .QuestionNum {
+    font-size: larger;
+    padding: 3%;
+}
+
+.alignment .Dropdown {
+    font-size: large;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.alignment .Points {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.alignment .Buttons {
+    padding-left: 5%;
+    display: flex;
+}
+.alignment .Buttons .Buttons1 {
+    display: flex;
+    margin-left: 20%;
+}
+.alignment .inline {
+    padding-left: 5%;
+}
+
+.alignment .title {
+    padding-left: 5%;
+}
+
+.alignment .Intro .openEnded {
+    margin-left: 2%;
+}

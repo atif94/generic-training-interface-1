@@ -1,0 +1,633 @@
+swagger: "2.0"
+info:
+  description: "This is a Generic Training "
+  version: 1.0.0
+  title: Generic Training Interface
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: generictrainingInterface.swagger.io
+basePath: /v2
+tags:
+  - name: user
+    description: Operations about user
+    externalDocs:
+      description: "Find "
+      url: http://TBD
+schemes:
+  - http
+paths:
+  /user:
+    post:
+      tags:
+        - user
+      summary: Create user
+      description: This can only be done by the logged in user.
+      operationId: createUser
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Created user object
+          required: true
+          schema:
+            $ref: "#/definitions/User"
+      responses:
+        default:
+          description: successful operation
+  /user/login:
+    get:
+      tags:
+        - user
+      summary: Logs user into the system
+      description: ""
+      operationId: loginUser
+      produces:
+        - application/json
+      parameters:
+        - name: username
+          in: query
+          description: The user name for login
+          required: true
+          type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: true
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            type: string
+          headers:
+            X-Rate-Limit:
+              type: integer
+              format: int32
+              description: calls per hour allowed by the user
+            X-Expires-After:
+              type: string
+              format: date-time
+              description: date in UTC when token expires
+        "400":
+          description: Invalid username/password supplied
+  /user/logout:
+    get:
+      tags:
+        - user
+      summary: Logs out current logged in user session
+      description: ""
+      operationId: logoutUser
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+  /user/{userId}:
+    get:
+      tags:
+        - user
+      summary: Get user by user Id
+      description: ""
+      operationId: getUserByUserId
+      produces:
+        - application/json
+      parameters:
+        - name: userId
+          in: path
+          description: "The name that needs to be fetched. Use Id or testing "
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/User"
+        "400":
+          description: Invalid UserId d
+        "404":
+          description: User not found
+  /user/username/{username}:
+    get:
+      tags:
+        - user
+      summary: Get user by user name
+      description: ""
+      operationId: getUserByName
+      produces:
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: "The name that needs to be fetched. Use user1 for testing. "
+          required: true
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/User"
+        "400":
+          description: Invalid username supplied
+        "404":
+          description: User not found
+    put:
+      tags:
+        - user
+      summary: Updated user
+      description: This can only be done by the logged in user.
+      operationId: updateUser
+      produces:
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: name that need to be updated
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Updated user object
+          required: true
+          schema:
+            $ref: "#/definitions/User"
+      responses:
+        "400":
+          description: Invalid user supplied
+        "404":
+          description: User not found
+    delete:
+      tags:
+        - user
+      summary: Delete user
+      description: This can only be done by the logged in user.
+      operationId: deleteUser
+      produces:
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: The name that needs to be deleted
+          required: true
+          type: string
+      responses:
+        "400":
+          description: Invalid username supplied
+        "404":
+          description: User not found
+  /users:
+    get:
+      tags:
+        - user
+      summary: Get All Users
+      description: ""
+      operationId: getAllUsers
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/User"
+  /course:
+    post:
+      tags:
+        - course
+      summary: Create course
+      description: This can only be done by the logged in course.
+      operationId: createCourse
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Created course object
+          required: true
+          schema:
+            $ref: "#/definitions/Course"
+      responses:
+        default:
+          description: successful operation
+  /course/{courseId}:
+    get:
+      tags:
+        - course
+      summary: Get course by course Id
+      description: ""
+      operationId: getCourseByCourseId
+      produces:
+        - application/json
+      parameters:
+        - name: courseId
+          in: path
+          description: "The name that needs to be fetched. Use Id or testing "
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/Course"
+        "400":
+          description: Invalid CourseId d
+        "404":
+          description: Course not found
+  /course/coursename/{coursename}:
+    get:
+      tags:
+        - course
+      summary: Get course by course name
+      description: ""
+      operationId: getCourseByName
+      produces:
+        - application/json
+      parameters:
+        - name: coursename
+          in: path
+          description: "The name that needs to be fetched. Use course1 for testing. "
+          required: true
+          type: string
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/Course"
+        "400":
+          description: Invalid coursename supplied
+        "404":
+          description: Course not found
+    put:
+      tags:
+        - course
+      summary: Updated course
+      description: This can only be done by the logged in course.
+      operationId: updateCourse
+      produces:
+        - application/json
+      parameters:
+        - name: coursename
+          in: path
+          description: name that need to be updated
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Updated course object
+          required: true
+          schema:
+            $ref: "#/definitions/Course"
+      responses:
+        "400":
+          description: Invalid course supplied
+        "404":
+          description: Course not found
+    delete:
+      tags:
+        - course
+      summary: Delete course
+      description: This can only be done by the logged in course.
+      operationId: deleteCourse
+      produces:
+        - application/json
+      parameters:
+        - name: coursename
+          in: path
+          description: The name that needs to be deleted
+          required: true
+          type: string
+      responses:
+        "400":
+          description: Invalid coursename supplied
+        "404":
+          description: Course not found
+  /courses:
+    get:
+      tags:
+        - course
+      summary: Get All courses
+      description: ""
+      operationId: getAllCourses
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/Course"
+  /enrolled:
+    post:
+      tags:
+        - enrolled
+      summary: Create enrollment for an user
+      description: This can only be done by the logged in System.
+      operationId: createEnrollment
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Created VideoScene object
+          required: true
+          schema:
+            $ref: "#/definitions/VideoScene"
+      responses:
+        default:
+          description: successful operation
+  /enrolled/{enrolledId}:
+    get:
+      tags:
+        - enrolled
+      summary: Get enrolled by enrolled Id
+      description: ""
+      operationId: getEnrolledById
+      produces:
+        - application/json
+      parameters:
+        - name: enrolledId
+          in: path
+          description: "The name that needs to be fetched. Use Id or testing "
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/VideoScene"
+        "400":
+          description: Invalid EnrolledId
+        "404":
+          description: VideoScene not found
+    delete:
+      tags:
+        - enrolled
+      summary: Get enrolled by enrolled Id
+      description: ""
+      operationId: deleteEnrolledById
+      produces:
+        - application/json
+      parameters:
+        - name: enrolledId
+          in: path
+          description: "The name that needs to be fetched. Use Id or testing "
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/VideoScene"
+        "400":
+          description: Invalid EnrolledId
+        "404":
+          description: VideoScene not found
+  /enrolled/userId/{userId}:
+    get:
+      tags:
+        - enrolled
+      summary: Get enrolled by User Id
+      description: ""
+      operationId: getEnrolledByUserId
+      produces:
+        - application/json
+      parameters:
+        - name: userId
+          in: path
+          description: "The name that needs to be fetched. Use Id or testing "
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/VideoScene"
+        "400":
+          description: Invalid UserId
+        "404":
+          description: UserId not found
+  /enrolled/courseId/{courseId}:
+    get:
+      tags:
+        - enrolled
+      summary: Get enrolled by courseId
+      description: ""
+      operationId: getEnrolledByCourseId
+      produces:
+        - application/json
+      parameters:
+        - name: courseId
+          in: path
+          description: "The name that needs to be fetched. Use Id or testing "
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/VideoScene"
+        "400":
+          description: Invalid courseId
+        "404":
+          description: courseId not found
+  /userTypes:
+    get:
+      tags:
+        - userType
+      summary: Get All UserType
+      description: ""
+      operationId: getAllUserTypes
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/Usertype"
+  /AssetTypes:
+    get:
+      tags:
+        - assetType
+      summary: Get All Assettype
+      description: ""
+      operationId: getAllAssetTypes
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: "#/definitions/Assettype"
+definitions:
+  User:
+    type: object
+    properties:
+      userId:
+        type: integer
+        format: int64
+      username:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      userType:
+        type: integer
+        format: int32
+        description: User Type
+    xml:
+      name: User
+  Course:
+    type: object
+    properties:
+      courseId:
+        type: integer
+        format: int64
+      coursename:
+        type: string
+      coursedescription:
+        type: string
+      instructorid:
+        type: integer
+        format: int64
+    xml:
+      name: Course
+  Enrolled:
+    type: object
+    properties:
+      enrolledId:
+        type: integer
+        format: int64
+      courseId:
+        type: integer
+        format: int64
+      userId:
+        type: integer
+        format: int64
+    xml:
+      name: VideoScene
+  Usertype:
+    type: object
+    properties:
+      usertypeId:
+        type: integer
+        format: int64
+      usertype:
+        type: string
+    xml:
+      name: Usertype
+  Asset:
+    type: object
+    properties:
+      assetId:
+        type: integer
+        format: int64
+      assettype:
+        type: string
+      url:
+        type: string
+      description:
+        type: string
+    xml:
+      name: Asset
+  Assettype:
+    type: object
+    properties:
+      usertypeId:
+        type: integer
+        format: int64
+      usertype:
+        type: string
+    xml:
+      name: Assettype
+  Scene:
+    type: object
+    properties:
+      sceneId:
+        type: integer
+        format: int64
+      sceneNumber:
+        type: integer
+        format: int64
+      asset1:
+        type: integer
+      asset2:
+        type: integer
+        format: int64
+      asset3:
+        type: integer
+      asset4:
+        type: integer
+        format: int64
+      courseId:
+        type: integer
+      title:
+        type: string
+    xml:
+      name: Scene
+  StudentResponse:
+    type: object
+    properties:
+      sceneId:
+        type: integer
+        format: int64
+      userId:
+        type: integer
+        format: int64
+      asset1:
+        type: integer
+      asset2:
+        type: integer
+        format: int64
+      asset3:
+        type: integer
+      asset4:
+        type: integer
+        format: int64
+    xml:
+      name: StudentResponse
+  QuestionQuiz:
+    type: object
+    properties:
+      assetId:
+        type: integer
+        format: int64
+      Q1:
+        type: string
+      Q2:
+        type: string
+      Q3:
+        type: string
+    xml:
+      name: QuestionQuiz
+  AnswerQuiz:
+    type: object
+    properties:
+      assetId:
+        type: integer
+        format: int64
+      A1:
+        type: string
+      A2:
+        type: string
+      A3:
+        type: string
+    xml:
+      name: AnswerQuiz
+  ApiResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      type:
+        type: string
+      message:
+        type: string

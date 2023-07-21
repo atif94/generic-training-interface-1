@@ -1,0 +1,85 @@
+.modalLoginBackgrounds {
+    width: 33vw;
+    height: 10vh;
+    background-color: clear;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  
+  .modalLoginContainer {
+    width: 35vw;
+    height: 40vh;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .modalLoginContainer .title {
+    display: inline-block;
+    text-align: center;
+    font-size: 5%;
+    padding-top: 5%;
+  }
+  
+  .titleCloseBtnLogin {
+    display: flex;
+  }
+  
+  .titleCloseBtnLogin button {
+    background-color: transparent;
+    border: none;
+    font-size: 5%;
+    cursor: pointer;
+  }
+  
+  .modalLoginContainer .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    text-align: center;
+    padding-top: 3%;
+  }
+  
+  .modalLoginContainer .optionTitle {
+    display: inline-block;
+    text-align: center;
+    font-size: 100%;
+    padding-top: 5%;
+  }
+  .modalLoginContainer .loginOptions {
+    display: inline-block;
+    text-align: center;
+    font-size: 100%;
+  }
+  
+  .modalLoginContainer .footer {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalLoginContainer .footer button {
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+    padding: 1vh;
+    padding-bottom: 1vh;
+    border: none;
+    background-color: #D34994;
+    color: white;
+    border-radius: 8px;
+    font-size: 100%;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
